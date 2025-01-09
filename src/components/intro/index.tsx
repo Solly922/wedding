@@ -63,7 +63,7 @@ export const Intro = () => {
         className={cn(
           "font-amsterdamFourSlant text-5xl text-accent-foreground transition p-8 h-full flex justify-center gap-10 items-center",
           isLoaded &&
-          "transform translate-y-[85vh] transition duration-1500 ease-out-expo delay-1500"
+          "transform translate-y-[100vh] transition duration-1500 ease-out-expo delay-1500"
         )}
       >
         <Solomon isLoaded={isLoaded} />
@@ -80,15 +80,15 @@ export const Title = ({ className }: { className: string }) => {
   return (
     <div
       className={cn(
-        "font-amsterdamFourSlant text-5xl text-foreground",
+        "font-amsterdamFourSlant h-full w-full text-5xl text-foreground flex justify-center gap-10 items-center",
         className
       )}
     >
-      <Solomon isLoaded={false} />
-      <And isLoaded={false} />
+      <Solomon isLoaded />
+      <And isLoaded />
       {/* edit audree if it looks weird*/}
       <Audree
-        isLoaded={false}
+        isLoaded
         className={cn(
           introOut &&
           "md:transition-transform md:duration-[1500ms] md:ease-out md:transform md:-translate-y-full",

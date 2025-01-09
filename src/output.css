@@ -678,6 +678,18 @@ body {
   z-index: 1000;
 }
 
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -974,6 +986,10 @@ body {
   color: hsl(var(--secondary-foreground));
 }
 
+.\!text-foreground {
+  color: hsl(var(--foreground)) !important;
+}
+
 .underline-offset-4 {
   text-underline-offset: 4px;
 }
@@ -1173,6 +1189,10 @@ body {
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-40 {
+    margin-bottom: 10rem;
+  }
+
   .sm\:block {
     display: block;
   }
