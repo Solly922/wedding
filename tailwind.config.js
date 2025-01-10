@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{ts,tsx,js,jsx}",
+    "./src/components/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -58,10 +62,14 @@ export default {
         },
       },
       transitionDuration: {
+        750: "750ms",
         1500: "1500ms",
+        2000: "2000ms",
       },
       transitionDelay: {
+        750: "750ms",
         1500: "1500ms",
+        2000: "2000ms",
       },
       transitionTimingFunction: {
         "in-out-expo": "cubic-bezier(1, 0, 0, 1)",

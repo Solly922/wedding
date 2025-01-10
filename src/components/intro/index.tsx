@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useMediaQuery } from "@darkroom.engineering/hamo";
 import cn from "clsx";
 import { useStore } from "@/lib/store";
@@ -7,7 +8,7 @@ export const Intro = () => {
   const isMobile = useMediaQuery("(max-width: 800px)");
   const [isLoaded, setIsLoaded] = useState(false);
   const [scroll, setScroll] = useState(false);
-  const introOut = useStore(({ introOut }) => introOut);
+  // const introOut = useStore(({ introOut }) => introOut);
   const setIntroOut = useStore(({ setIntroOut }) => setIntroOut);
   const lenis = useStore(({ lenis }) => lenis);
 
@@ -44,7 +45,7 @@ export const Intro = () => {
   return (
     <div
       className={cn(
-        "h-screen w-full bg-accent fixed top-0 left-0 z-[1000] overflow-hidden sm:block hidden",
+        "h-screen w-full bg-accent fixed top-0 left-0 z-[1000] overflow-hidden ",
         isLoaded &&
         "transform -translate-y-full transition-transform duration-1500 ease-out-expo delay-1500"
       )}
@@ -61,7 +62,7 @@ export const Intro = () => {
     >
       <div
         className={cn(
-          "font-amsterdamFourSlant text-5xl text-accent-foreground transition p-8 h-full flex justify-center gap-10 items-center",
+          "font-amsterdamFourSlant sm:text-5xl text-3xl text-accent-foreground transition p-8 h-full flex justify-center gap-10 items-center",
           isLoaded &&
           "transform translate-y-[100vh] transition duration-1500 ease-out-expo delay-1500"
         )}
@@ -75,26 +76,19 @@ export const Intro = () => {
 };
 
 export const Title = ({ className }: { className: string }) => {
-  const introOut = useStore(({ introOut }) => introOut);
+  // const introOut = useStore(({ introOut }) => introOut);
 
   return (
     <div
       className={cn(
-        "font-amsterdamFourSlant h-full w-full text-5xl text-foreground flex justify-center gap-10 items-center",
+        "font-amsterdamFourSlant h-full w-full sm:text-4xl text-2xl md:text-5xl text-accent flex justify-center gap-10 items-center",
         className
       )}
     >
       <Solomon isLoaded />
       <And isLoaded />
       {/* edit audree if it looks weird*/}
-      <Audree
-        isLoaded
-        className={cn(
-          introOut &&
-          "md:transition-transform md:duration-[1500ms] md:ease-out md:transform md:-translate-y-full",
-          "-translate-y-[105%] md:translate-y-0"
-        )}
-      />
+      <Audree isLoaded />
     </div>
   );
 };
@@ -174,9 +168,9 @@ const Audree = ({
     >
       <h1
         className={cn(
-          "transform translate-y-[125%] translate-x-[100%]",
+          "transition-transform transform translate-y-[125%] translate-x-full",
           isLoaded &&
-          "transition-transform duration-1500 ease-out-expo delay-225 translate-x-[0%]"
+          "transition-transform duration-1500 ease-out-expo delay-75 !translate-x-0"
         )}
         style={{ "--index": 3 } as CSSProperties}
       >
