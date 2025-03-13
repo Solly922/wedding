@@ -45,9 +45,9 @@ export const Intro = () => {
   return (
     <div
       className={cn(
-        "h-screen w-full bg-accent fixed top-0 left-0 z-[1000] overflow-hidden ",
-        isLoaded &&
-        "transform -translate-y-full transition-transform duration-1500 ease-out-expo delay-1500"
+        "h-screen w-full bg-accent fixed top-0 left-0 z-[1000] overflow-hidden "
+        // isLoaded &&
+        // "transform -translate-y-full transition-transform duration-1500 ease-out-expo delay-1500"
       )}
       onTransitionEnd={(e) => {
         (e.target as any).classList.forEach((value: any) => {
@@ -62,9 +62,9 @@ export const Intro = () => {
     >
       <div
         className={cn(
-          "font-amsterdamFourSlant sm:text-5xl text-3xl text-accent-foreground transition p-8 h-full flex justify-center gap-10 items-center",
-          isLoaded &&
-          "transform translate-y-[100vh] transition duration-1500 ease-out-expo delay-1500"
+          "font-amsterdamFourSlant sm:text-5xl text-3xl text-accent-foreground transition p-8 h-full flex justify-center gap-10 items-center"
+          // isLoaded &&
+          // "transform translate-y-[100vh] transition duration-1500 ease-out-expo delay-1500"
         )}
       >
         <Solomon isLoaded={isLoaded} />
@@ -132,16 +132,16 @@ const And = ({
   return (
     <div
       className={cn(
-        "opacity-0 blur-lg transition-all duration-1000",
-        isLoaded && "opacity-100 blur-none",
+        // "opacity-0 blur-none transition-all duration-1000 text-center",
+        // isLoaded && "opacity-100 blur-none",
         className
       )}
     >
       <h1
         className={cn(
-          "text-xl transform transition-transform",
+          "text-xl transform transition-transform blur-lg",
           isLoaded &&
-          "transition-transform duration-1500 ease-out-expo delay-150 translate-y-0"
+          "transition-transform duration-1500 ease-out-expo delay-150 translate-y-0 blur-none"
         )}
         style={{ "--index": 2 } as CSSProperties}
       >
